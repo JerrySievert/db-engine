@@ -1,0 +1,20 @@
+{
+  "name": "dblite",
+  "version": "0.0.0",
+  "description": "a database building toolkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/vows/bin/vows --spec"
+  },
+  "author": "<Jerry Sievert> code@legitimatesounding.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:JerrySievert/dblite.git"
+  },
+  "license": "BSD",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "vows": "^0.7.0"
+  }
+}
