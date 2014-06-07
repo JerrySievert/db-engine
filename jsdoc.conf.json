@@ -1,0 +1,28 @@
+{
+  "tags"      : {
+    "allowUnknownTags" : true
+  },
+  "plugins"   : ["plugins/markdown"],
+  "templates" : {
+    "cleverLinks"     : false,
+    "monospaceLinks"  : false,
+    "default"         : {
+      "outputSourceFiles" : true
+    },
+    "systemName"      : "DBLite",
+    "footer"          : "",
+    "copyright"       : "DBLite Copyright © 2014 Jerry Sievert.",
+    "navType"         : "horizontal",
+    "theme"           : "simplex",
+    "linenums"        : true,
+    "collapseSymbols" : false,
+    "inverseNav"      : false
+  },
+  "markdown"  : {
+    "parser"   : "gfm",
+    "hardwrap" : true
+  },
+  "opts" : {
+    "version": false
+  }
+}

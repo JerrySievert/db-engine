@@ -12,9 +12,13 @@
     "url": "git@github.com:JerrySievert/dblite.git"
   },
   "license": "BSD",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
-    "vows": "^0.7.0"
+    "vows": "^0.7.0",
+    "grunt": "^0.4.5",
+    "grunt-complexity": "^0.1.7",
+    "grunt-jsdoc-plugin": "git+https://github.com/JerrySievert/grunt-jsdoc-plugin.git",
+    "ink-docstrap": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0"
   }
 }
