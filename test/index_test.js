@@ -70,7 +70,7 @@ vows.describe('index.js').addBatch({
         index.addIndex({ property: "foo", index: new testIndex() }, function ( ) {
           index.add(1, { "foo": "bar" }, function ( ) {
             index.add(2, { "foo": "baz" }, function ( ) {
-              index.searchIndexes({ "key": "foo", "value": "bar", "type": "equals" }, self.callback);
+              index.searchIndexes({ "key": "foo", "value": "bar", "operand": "equals" }, self.callback);
             });
           });
         });
