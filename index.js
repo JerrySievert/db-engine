@@ -1,3 +1,3 @@
-var indexStore = require('./lib/index_store');
+var index = require('./lib/index');
 
-exports.indexStore = indexStore;
+exports.index = index;

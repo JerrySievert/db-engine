@@ -1,7 +1,7 @@
 var vows = require('vows'),
     assert = require('assert');
 
-var indexStore = require('../lib/index_store');
+var indexStore = require('../lib/index');
 var testIndex = require('./helpers/simple_index').SimpleIndex;
 var testStore = require('./helpers/simple_store').SimpleStore;
 
