@@ -24,7 +24,9 @@ gulp.task('jshint', function () {
     'index.js',
     'lib/*.js'
   ])
-  .pipe(jshint())
+  .pipe(jshint({
+    lookup: true
+  }))
   .pipe(jshint.reporter('jshint-stylish'))
   .pipe(jshint.reporter('fail'));
 });
