@@ -68,10 +68,12 @@ Database.prototype.remove = function remove (key, callback) {
   });
 };
 
-Database.prototype.query = function query (search, callback) {
-  var parsed = query.parseQuery(search);
+Database.prototype.parseQuery = function parseQuery (search) {
+  return query.parseQuery(search);
+};
 
-  query.runQuery(parsed, callback);
+Database.prototype.query = function query (tree, callback) {
+  query.runQuery(tree, callback);
 };
 
 module.exports = exports = Database;
