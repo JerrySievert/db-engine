@@ -12,7 +12,9 @@
     "url": "git@github.com:JerrySievert/dblite.git"
   },
   "license": "BSD",
-  "dependencies": {},
+  "dependencies": {
+    "gulp": "^3.8.7"
+  },
   "devDependencies": {
     "vows": "^0.7.0",
     "grunt": "^0.4.5",

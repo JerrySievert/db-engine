@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var complex = require('gulp-escomplex');
-var complexreporter = require('gulp-escomplex-reporter-json');
+var complexreporter = require('gulp-escomplex-reporter-html');
 var jshint = require('gulp-jshint');
 var shell = require('gulp-shell');
 
@@ -9,8 +9,10 @@ var pack = require('./package.json');
 gulp.task('complexity', function () {
   gulp.src([
     'index.js',
-    'lib/*.js'
-  ])
+    'lib/**'
+  ], {
+    base: __dirname
+  })
   .pipe(complex({
     packageName: pack.name,
     packageVersion: pack.version

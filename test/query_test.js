@@ -4,7 +4,7 @@ var assert = require('assert');
 var query = require('../lib/query');
 
 vows.describe('query.js').addBatch({
-  "Given threww arrays": {
+  "Given three arrays": {
     topic: function ( ) {
       return [ [ 1, 2, 3, 4 ], [ 2, 3, 4, 5, 6 ], [ 3, 4, 5, 6, 7 ] ];
     },
