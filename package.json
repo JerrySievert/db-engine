@@ -1,6 +1,6 @@
 {
   "name": "db-engine",
-  "version": "0.0.0",
+  "version": "0.5.0",
   "description": "a database building toolkit",
   "main": "index.js",
   "scripts": {
@@ -13,16 +13,15 @@
   },
   "license": "BSD",
   "dependencies": {
-    "gulp": "^3.8.7"
   },
   "devDependencies": {
     "vows": "^0.7.0",
-    "grunt": "^0.4.5",
-    "grunt-complexity": "^0.1.7",
-    "grunt-jsdoc-plugin": "git+https://github.com/JerrySievert/grunt-jsdoc-plugin.git",
-    "ink-docstrap": "^0.4.5",
-    "grunt-contrib-jshint": "^0.10.0",
     "istanbul": "^0.3.0",
-    "jshint-stylish": "^0.4.0"
+    "jshint-stylish": "^0.4.0",
+    "gulp-escomplex": "^1.0.0",
+    "gulp-shell": "^0.2.9",
+    "gulp-escomplex-reporter-html": "^1.0.0",
+    "gulp": "^3.8.7",
+    "gulp-jshint": "^1.8.4"
   }
 }
