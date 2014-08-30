@@ -1,5 +1,5 @@
 {
-  "name": "dblite",
+  "name": "db-engine",
   "version": "0.0.0",
   "description": "a database building toolkit",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "author": "<Jerry Sievert> code@legitimatesounding.com",
   "repository": {
     "type": "git",
-    "url": "git@github.com:JerrySievert/dblite.git"
+    "url": "git@github.com:JerrySievert/db-engine.git"
   },
   "license": "BSD",
   "dependencies": {
