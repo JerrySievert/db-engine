@@ -6,6 +6,7 @@ function Database (/* store, indexes, callback */) {
 
   this.store = args.shift();
   this.index = new index();
+  this.index.setBackingStore(this.store);
 
   var callback = args.pop();
 
@@ -30,14 +31,16 @@ function Database (/* store, indexes, callback */) {
           count++;
 
           if (count === indexes.length) {
-            callback();
+            callback(null, self);
           }
         });
       }
     } else {
-      callback();
+      callback(null, self);
     }
   });
+
+  stream.resume();
 }
 
 Database.prototype.addIndex = function addIndex (index, callback) {
@@ -68,12 +71,10 @@ Database.prototype.remove = function remove (key, callback) {
   });
 };
 
-Database.prototype.parseQuery = function parseQuery (search) {
-  return query.parseQuery(search);
-};
+Database.prototype.parseQuery = query.parseQuery;
 
-Database.prototype.query = function query (tree, callback) {
-  query.runQuery(tree, callback);
+Database.prototype.query = function lquery (search, callback) {
+  query.runQuery(search, this.index, this.store, callback);
 };
 
 module.exports = exports = Database;
