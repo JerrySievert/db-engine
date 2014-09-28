@@ -9,9 +9,9 @@
     "default"         : {
       "outputSourceFiles" : true
     },
-    "systemName"      : "DBLite",
+    "systemName"      : "DB-Engine",
     "footer"          : "",
-    "copyright"       : "DBLite Copyright © 2014 Jerry Sievert.",
+    "copyright"       : "DB-Engine Copyright © 2014 Jerry Sievert.",
     "navType"         : "horizontal",
     "theme"           : "simplex",
     "linenums"        : true,
