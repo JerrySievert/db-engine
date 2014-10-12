@@ -13,6 +13,7 @@
   },
   "license": "BSD",
   "dependencies": {
+    "terraformer-geostore-index-btree": "^1.0.0"
   },
   "devDependencies": {
     "vows": "^0.7.0",

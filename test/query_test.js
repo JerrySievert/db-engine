@@ -241,6 +241,10 @@ vows.describe('query.js').addBatch({
       store.add(2, { "foo": "baz" });
       store.add(3, { "foo": "foo" });
       store.add(4, { "foo": "baz", "bar": "baz" });
+      store.add(5, { "sort": 1, "sort1": 1, "sort2": 5});
+      store.add(6, { "sort": 1, "sort1": 1, "sort2": 1});
+      store.add(7, { "sort": 1, "sort1": 3, "sort2": 5});
+      store.add(8, { "sort": 1, "sort1": 2, "sort2": 5});
       ind.setBackingStore(store);
 
       return { store: store, index: ind };
@@ -309,6 +313,29 @@ vows.describe('query.js').addBatch({
         assert.isNull(err);
         assert.equal(results.length, 1);
         assert.equal(results[0], 4);
+      }
+    },
+    "and a query that should return something and has order runs": {
+      topic: function (topic) {
+        query.runQuery(
+          {
+            operand: "equals",
+            key: "sort",
+            value: 1,
+            order: [ "sort1", "sort2" ]
+          },
+          topic.index,
+          topic.store,
+          this.callback
+        );
+      },
+      "there should be correctly ordered result": function (err, results) {
+        assert.isNull(err);
+        assert.equal(results.length, 4);
+        assert.equal(results[0], 6);
+        assert.equal(results[1], 5);
+        assert.equal(results[2], 8);
+        assert.equal(results[3], 7);
       }
     }
   },
