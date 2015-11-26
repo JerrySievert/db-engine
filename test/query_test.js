@@ -159,14 +159,12 @@ vows.describe('query.js').addBatch({
   },
   "When a query with too many keys is parsed": {
     topic: function ( ) {
-      try {
+      return function ( ) {
         query.parseQuery({
           "foo": "bar",
           "bar": "baz"
         });
-      } catch (err) {
-        return err;
-      }
+      };
     },
     "an error is thrown": function (topic) {
       assert.throws(topic, Error);
@@ -174,13 +172,11 @@ vows.describe('query.js').addBatch({
   },
   "When a query with incorrect arguments to $and is parsed": {
     topic: function ( ) {
-      try {
+      return function ( ) {
         query.parseQuery({
           "$and": "bar"
         });
-      } catch (err) {
-        return err;
-      }
+      };
     },
     "an error is thrown": function (topic) {
       assert.throws(topic, Error);
@@ -188,13 +184,11 @@ vows.describe('query.js').addBatch({
   },
   "When a query with an array argument to the key is parsed": {
     topic: function ( ) {
-      try {
+      return function ( ) {
         query.parseQuery({
           "foo": [ 1, 2 ]
         });
-      } catch (err) {
-        return err;
-      }
+      };
     },
     "an error is thrown": function (topic) {
       assert.throws(topic, Error);
@@ -202,13 +196,11 @@ vows.describe('query.js').addBatch({
   },
   "When a query with any other type of argument to the key is parsed": {
     topic: function ( ) {
-      try {
+      return function ( ) {
         query.parseQuery({
           "foo": true
         });
-      } catch (err) {
-        return err;
-      }
+      };
     },
     "an error is thrown": function (topic) {
       assert.throws(topic, Error);
@@ -216,13 +208,11 @@ vows.describe('query.js').addBatch({
   },
   "When a query with an empty object argument to the key is parsed": {
     topic: function ( ) {
-      try {
+      return function ( ) {
         query.parseQuery({
           "foo": { }
         });
-      } catch (err) {
-        return err;
-      }
+      };
     },
     "an error is thrown": function (topic) {
       assert.throws(topic, Error);

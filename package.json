@@ -1,6 +1,6 @@
 {
   "name": "db-engine",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "a database building toolkit",
   "main": "index.js",
   "scripts": {
