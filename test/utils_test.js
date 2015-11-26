@@ -136,6 +136,17 @@ vows.describe('utils.js').addBatch({
     "something that is not between should return false": function (topic) {
       assert.equal(utils.compare(topic, { "test": 124 }), false);
     }
+  },
+  "When using compare with exists": {
+    topic: function ( ) {
+      return {
+        operand: "exists",
+        key: "test"
+      };
+    },
+    "something that exists should be true": function (topic) {
+      assert(utils.compare(topic, { "test": true }));
+    }
   }
 
 
