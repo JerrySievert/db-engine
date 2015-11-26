@@ -71,6 +71,10 @@ Database.prototype.remove = function remove (key, callback) {
   });
 };
 
+Database.prototype.get = function get (key, callback) {
+  this.store.get(key, callback);
+};
+
 Database.prototype.parseQuery = query.parseQuery;
 
 Database.prototype.query = function lquery (search, callback) {
