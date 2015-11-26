@@ -13,16 +13,17 @@
   },
   "license": "BSD",
   "dependencies": {
-    "terraformer-geostore-index-btree": "^1.0.0"
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-shell": "^0.5.1",
+    "istanbul": "^0.4.1",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.1.0",
+    "terraformer-geostore-index-btree": "^1.0.0",
+    "vows": "^0.8.1"
   },
   "devDependencies": {
-    "vows": "^0.7.0",
-    "istanbul": "^0.3.0",
-    "jshint-stylish": "^0.4.0",
     "gulp-escomplex": "^1.0.0",
-    "gulp-shell": "^0.2.9",
-    "gulp-escomplex-reporter-html": "^1.0.0",
-    "gulp": "^3.8.7",
-    "gulp-jshint": "^1.8.4"
+    "gulp-escomplex-reporter-html": "^1.0.0"
   }
 }
