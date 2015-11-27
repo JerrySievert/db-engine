@@ -50,7 +50,7 @@ Database.prototype.addIndex = function addIndex (index, callback) {
 Database.prototype.add = function add (key, value, callback) {
   var self = this;
 
-  this.store.add(key, value, function addCallback (err) {
+  this.store.put(key, value, function addCallback (err) {
     if (err) {
       callback(err);
     } else {
